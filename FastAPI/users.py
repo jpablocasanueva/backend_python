@@ -53,6 +53,8 @@ async def updateUser(user: User):
     
     if not found:
         return {'error': 'No se ha actualizado el usuario'}
+    else:
+        return user
 
 def search_user(id):
     users = filter(lambda user: user.id == id, users_list)
